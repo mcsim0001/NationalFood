@@ -6,7 +6,7 @@
     android:name="ua.com.mcsim.testguide.ItemListFragment"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorAccent"
+    android:background="@drawable/back_uzor"
     app:layoutManager="LinearLayoutManager"
     tools:context="ua.com.mcsim.national.ItemListActivity"
     tools:listitem="@layout/cardview_row_item" />

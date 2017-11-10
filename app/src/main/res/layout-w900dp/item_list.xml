@@ -1,86 +1,3 @@
-<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent">
-
-    &lt;!&ndash;
-    This layout is a two-pane layout for the Items
-    master/detail flow.
-    
-    &ndash;&gt;
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"
-        android:orientation="horizontal"
-        ads:layout_constraintBottom_toBottomOf="@+id/adView2"
-        ads:layout_constraintHorizontal_bias="0.0"
-        ads:layout_constraintLeft_toLeftOf="parent"
-        ads:layout_constraintRight_toRightOf="parent"
-        ads:layout_constraintTop_toTopOf="parent"
-        ads:layout_constraintVertical_bias="0.0"
-        tools:context="ua.com.mcsim.manuals.burgerstop.ItemListActivity">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/item_list"
-            android:name="ua.com.mcsim.manuals.burgerstop.ItemListFragment"
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            ads:layout_constraintBottom_toTopOf="@+id/adView2"
-            ads:layout_constraintLeft_toLeftOf="parent"
-            ads:layout_constraintRight_toRightOf="parent"
-            ads:layout_constraintTop_toTopOf="parent"
-            app:layoutManager="LinearLayoutManager"
-            tools:context="ua.com.mcsim.manuals.burgerstop.ItemListActivity"
-            tools:listitem="@layout/cardview_row_item">
-
-        </android.support.v7.widget.RecyclerView>
-
-        <android.support.v4.widget.NestedScrollView
-            android:id="@+id/item_detail_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            ads:layout_constraintBottom_toBottomOf="parent"
-            ads:layout_constraintLeft_toRightOf="@+id/item_list"
-            ads:layout_constraintRight_toRightOf="parent"
-            android:layout_weight="3"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        </android.support.v4.widget.NestedScrollView>
-
-    </LinearLayout>
-
-    &lt;!&ndash;<FrameLayout
-        android:id="@+id/item_detail_container"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3" />&ndash;&gt;
-
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:animateLayoutChanges="true"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/ad_bottom_unit_id"
-        ads:layout_constraintBottom_toBottomOf="parent"
-        ads:layout_constraintHorizontal_bias="0.0"
-        ads:layout_constraintLeft_toLeftOf="parent"
-        ads:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="8dp">
-
-    </com.google.android.gms.ads.AdView>
-
-</android.support.constraint.ConstraintLayout>-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -105,8 +22,7 @@
         android:name="ua.com.mcsim.myapplication.ItemListFragment"
         android:layout_width="@dimen/item_width"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:background="@drawable/back_uzor"
         app:layoutManager="LinearLayoutManager"
         tools:context="ua.com.mcsim.national.ItemListActivity"
         tools:listitem="@layout/cardview_row_item" />

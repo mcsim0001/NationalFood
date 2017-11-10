@@ -13,16 +13,49 @@ public class Content {
 
     private static final int COUNT = 10;
 
-    public static final String[] NAMES = {  "Bacon Burgers on Brioche Buns",  //1
-                                            "Umami Burgers with Port and Stilton",  //2
-                                            "Pug Burger",  //3
-                                            "Cheddar BLT Burgers with Tarragon Russian Dressing",  //4
-                                            "All-American Hamburgers with Red Onion Compote",  //5
-                                            "Green-Chile Burgers with Fried Eggs",  //6
-                                            "Beef Burgers with Peanut-Chipotle Barbecue Sauce",      //7
-                                            "Minetta Burger",      //8
-                                            "Cheddar-and-Onion Smashed Burgers",     //9
-                                            "Chile-Stuffed Cheeseburger"};      //10
+    public static final String[] NAMES = {  "Classic Ukrainian Borsht",  //1
+                                            "Deruni",  //2
+                                            "Homemade sausage",  //3
+                                            "Salo with garlic",  //4
+                                            "Vareniki with Potatoes",  //5
+                                            "Kulish",  //6
+                                            "Kapustnyak Zaporizhian",      //7
+                                            "Hutsul Banush",      //8
+                                            "Cottage cheese pancakes",     //9
+                                            "Uzvar"};      //10
+
+    public static final String[] TYPES = {  "Soups",//1
+                                            "Mains",  //2
+                                            "Mains",  //3
+                                            "Appetizers",  //4
+                                            "Mains",  //5
+                                            "Soups",  //6
+                                            "Soups",      //7
+                                            "Mains",      //8
+                                            "Desserts",     //9
+                                            "Drinks"};      //10
+
+    public static final String[] READYS = { "2 hours",//1
+                                            "30 min.",  //2
+                                            ">3 hours",  //3
+                                            "30 min.",  //4
+                                            "45 min.",  //5
+                                            "1,5 hours",  //6
+                                            "1 hour",      //7
+                                            "1 hour",      //8
+                                            "30 min.",     //9
+                                            "45 min."};      //10
+
+    public static final String[] CALORIES = { "Middle",//1
+                                            "Middle",  //2
+                                            "High",  //3
+                                            "High",  //4
+                                            "High",  //5
+                                            "Middle",  //6
+                                            "Middle",      //7
+                                            "High",      //8
+                                            "Middle",     //9
+                                            "Low"};      //10
 
     public static final int[] FACE_ID = {   R.drawable.face1,
                                             R.drawable.face2,
@@ -65,6 +98,9 @@ public class Content {
 
         return new ContentItem(String.valueOf(position),
                                             NAMES[position-1],
+                                            TYPES[position-1],
+                                            READYS[position-1],
+                                            CALORIES[position-1],
                                             DETAIL_URLS[position-1]);
     }
 
@@ -73,18 +109,36 @@ public class Content {
 
         public final String id;
 
+        public final String name;
         public String getName() {
             return name;
         }
 
-        public final String name;
+        public final String type;
+        public String getType() {
+            return type;
+        }
+
+        public final String ready;
+        public String getReady() {
+            return ready;
+        }
+
+        public final String calory;
+        public String getCalory() {
+            return calory;
+        }
+
         public final String detailsUrl;
 
 
 
-        ContentItem (String id, String name, String detailsUrl) {
+        ContentItem (String id, String name, String type, String ready, String calory, String detailsUrl) {
             this.id = id;
             this.name = name;
+            this.type = type;
+            this.ready = ready;
+            this.calory = calory;
             this.detailsUrl = detailsUrl;
         }
 

@@ -10,9 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import ua.com.mcsim.national.content.Content;
 import java.util.List;
 
@@ -90,8 +90,10 @@ public class ItemListActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mItem = mValues.get(position);
-            holder.name_tv.setText("Burger #" + String.valueOf(position+1));
-            holder.email_tv.setText(mValues.get(position).getName());
+            holder.name_tv.setText(mValues.get(position).getName());
+            holder.type_tv.setText(mValues.get(position).getType());
+            holder.ready_tv.setText(mValues.get(position).getReady());
+            holder.calories_tv.setText(mValues.get(position).getCalory());
             holder.pic_iv.setImageResource(Content.FACE_ID[position]);
 
             holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -125,8 +127,10 @@ public class ItemListActivity extends AppCompatActivity {
 
             private CardView cardView;
             private TextView name_tv;
-            private TextView email_tv;
-            private ImageView pic_iv;
+            private TextView type_tv;
+            private TextView ready_tv;
+            private TextView calories_tv;
+            private CircleImageView pic_iv;
             public Content.ContentItem mItem;
 
             public ViewHolder(View view) {
@@ -134,7 +138,9 @@ public class ItemListActivity extends AppCompatActivity {
                 super(view);
                 cardView = view.findViewById(R.id.cv);
                 name_tv = view.findViewById(R.id.member_name);
-                email_tv = view.findViewById(R.id.member_email);
+                type_tv = view.findViewById(R.id.member_type);
+                ready_tv = view.findViewById(R.id.member_ready);
+                calories_tv = view.findViewById(R.id.member_calories);
                 pic_iv = view.findViewById(R.id.profile_pic);
             }
 

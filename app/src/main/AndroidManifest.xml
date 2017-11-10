@@ -20,7 +20,7 @@
         <activity
             android:name="ua.com.mcsim.national.ItemDetailActivity"
             android:parentActivityName="ua.com.mcsim.national.ItemListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.noActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ua.com.mcsim.national.ItemListActivity" />
